@@ -1,0 +1,19 @@
+{
+	"include": ["src/**/*"],
+	"compilerOptions": {
+		"target": "ES2022",
+		"module": "Node16",
+		"moduleResolution": "Node16",
+		"allowSyntheticDefaultImports": true,
+		"alwaysStrict": true,
+		"noImplicitAny": false,
+		"noImplicitThis": false,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"resolveJsonModule": true,
+		"allowJs": false,
+		"sourceMap": true,
+		"lib": ["ES2022"],
+		"baseUrl": "."
+	}
+}
