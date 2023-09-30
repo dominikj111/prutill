@@ -12,7 +12,7 @@
 	},
 	"plugins": ["prettier", "@typescript-eslint"],
 	"root": true,
-	"ignorePatterns": ["webpack.*", "*.config.js", "dist"],
+	"ignorePatterns": ["dist_commonjs", "dist_es6"],
 	"rules": {
 		"prettier/prettier": "warn",
 		"import/extensions": "off",

@@ -1,0 +1,20 @@
+{
+	"include": ["index.ts"],
+	"compilerOptions": {
+		"target": "ES6",
+		"module": "ES2022",
+		"moduleResolution": "Bundler",
+		"allowSyntheticDefaultImports": true,
+		"alwaysStrict": true,
+		"noImplicitAny": false,
+		"noImplicitThis": false,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"resolveJsonModule": true,
+		"allowJs": false,
+		"sourceMap": true,
+		"lib": ["ES2022"],
+		"baseUrl": ".",
+		"outDir": "./dist_es6",
+	}
+}

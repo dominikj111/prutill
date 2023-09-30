@@ -1,9 +1,8 @@
 {
-	"include": ["src/**/*"],
+	"include": ["index.ts"],
 	"compilerOptions": {
-		"target": "ES2022",
-		"module": "Node16",
-		"moduleResolution": "Node16",
+		"target": "ES6",
+		"module": "CommonJS",
 		"allowSyntheticDefaultImports": true,
 		"alwaysStrict": true,
 		"noImplicitAny": false,
@@ -14,6 +13,7 @@
 		"allowJs": false,
 		"sourceMap": true,
 		"lib": ["ES2022"],
-		"baseUrl": "."
+		"baseUrl": ".",
+		"outDir": "./dist_commonjs",
 	}
 }
