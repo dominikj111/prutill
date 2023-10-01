@@ -1,19 +1,13 @@
 {
+	"extends": "./tsconfig.json",
 	"include": ["index.ts"],
 	"compilerOptions": {
 		"target": "ES6",
 		"module": "CommonJS",
-		"allowSyntheticDefaultImports": true,
-		"alwaysStrict": true,
-		"noImplicitAny": false,
-		"noImplicitThis": false,
-		"strictNullChecks": true,
-		"strictFunctionTypes": true,
-		"resolveJsonModule": true,
-		"allowJs": false,
-		"sourceMap": true,
-		"lib": ["ES2022"],
-		"baseUrl": ".",
 		"outDir": "./dist_commonjs",
+
+		"allowImportingTsExtensions": false,
+        "emitDeclarationOnly": false,
+        "declaration": false
 	}
 }

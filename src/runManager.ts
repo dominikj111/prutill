@@ -27,7 +27,7 @@ export function stackBuilder<T>(resolveAllPrevious = true): (_: Promise<T>) => P
 	let storedResolveCallbacks: ((_value: T) => void)[] = [];
 	let storedPromises: Promise<T>[] = [];
 
-	return async promise => {
+	return promise => {
 		storedPromises.push(promise);
 
 		const promiseWithId = {
@@ -101,7 +101,7 @@ export function raceBuilder<T>(resolveAllOthers = true): (_: Promise<T>) => Prom
 	let storedResolveCallbacks: ((_value: T) => void)[] = [];
 	let resolving = false;
 
-	return async promise => {
+	return promise => {
 		return new Promise(resolve => {
 			if (resolveAllOthers) {
 				storedResolveCallbacks.push(resolve);
