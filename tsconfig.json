@@ -1,5 +1,4 @@
 {
-	"include": ["index.ts", "./tests"],
 	"compilerOptions": {
 		"target": "ES2022",
 		"allowSyntheticDefaultImports": true,
@@ -11,11 +10,6 @@
 		"allowJs": false,
 		"sourceMap": true,
 		"lib": ["ES2022"],
-		"baseUrl": ".",
-        
-        "allowImportingTsExtensions": true,
-        "emitDeclarationOnly": true,
-        "declaration": true,
-        "module": "ES2022"
+		"baseUrl": "."
 	}
 }

@@ -4,10 +4,6 @@
 	"compilerOptions": {
 		"target": "ES6",
 		"module": "CommonJS",
-		"outDir": "./dist_commonjs",
-
-		"allowImportingTsExtensions": false,
-        "emitDeclarationOnly": false,
-        "declaration": false
+		"outDir": "./dist_commonjs"
 	}
 }
