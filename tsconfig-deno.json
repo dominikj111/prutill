@@ -1,10 +1,5 @@
 {
     "extends": "./tsconfig.json",
-	"include": ["index.ts", "tests"],
-	"compilerOptions": {
-        "module": "ES2022",
-		"allowImportingTsExtensions": true,
-        "emitDeclarationOnly": true,
-        "declaration": true
-	}
+	"include": ["index-deno.ts", "tests"],
+    "exclude": ["tests/node.test.js"]
 }

@@ -4,7 +4,8 @@
   "description": "A set of utilities to solve Promise specific problems",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "build": "rm -rf dist_* && tsc --project tsconfig-commonjs.json && tsc --project tsconfig-es6.json",
+    "test": "jest && jest -c jest-node.config.json && deno test --config tsconfig-deno.json"
   },
   "repository": {
     "type": "git",
