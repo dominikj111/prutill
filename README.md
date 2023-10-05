@@ -14,5 +14,7 @@
 ## Possible improvements when requested
 
 :black_square_button: Add bundling to import from CDN (vanilla js, deno) -> umd, esm
+
 :black_square_button: Improve Continuous Integration
+
 :black_square_button: Add Changelog, Code of Conduct, Testing
