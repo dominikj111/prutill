@@ -1,17 +1,70 @@
+{{< /*<!-- markdownlint-disable MD041 -->*/ >}}
+
 [![GitHub version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=1.0.1&x2=0)](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=1.0.1&x2=0)
 [![Coverage Status](https://coveralls.io/repos/boennemann/badges/badge.svg)](https://coveralls.io/r/boennemann/badges)
 [![dependency status](https://deps.rs/crate/autocfg/1.1.0/status.svg)](https://deps.rs/crate/autocfg/1.1.0)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
-## What is it?
+# What is it?
 
-:construction_worker:
+**Not React.js only** Promise utilities to improve multiple Promise processing.
 
-## How to use it?
+Ready to be used in Deno and Node.js as well as with any bundler. To see more details how to use it, please check related unit tests in `./src/*.spec.ts`, `./index-deno.(t|j)s`, `./index.ts` and tests in `./tests` folder.
 
-:construction_worker:
+{{< /*<!-- markdownlint-disable MD033 -->*/ >}}
+<br /><br />
 
-## Possible improvements when requested
+The orignal inspiration went from the issue in React.js application I had, where the `useEffect` watched multiple variables triggered multiple promises which each of one ran `then` action. If latest promise has been quicker, the earlier less relevant has main effect upon the application state.
+
+## How to get it?
+
+`npm i prutill`
+
+# Problems to solve
+
+As a develoer, I want:
+
+- To make multiple promises, but act on latestly added only.
+
+```ts
+import { getLastPromise } from "prutill";
+
+...
+
+React.useEffect(() => {
+    getLastPromise("my_data_processing_promise_stack", /* Promise, fetch or anything what returns promise */).then(data => {
+        // Do something with data from last promise/update
+    });
+}, [ state.var_1, state.var_2, state.var_3 ]);
+
+...
+```
+
+- To make multiple promises, but act on the quickest one.
+
+```ts
+import { getRaceWonPromise } from "prutill";
+
+...
+
+React.useEffect(() => {
+    getRaceWonPromise("my_data_processing_promise_race", fetch(...) /* Promise, fetch or anything what returns promise */).then(data => {
+        // Do something with data from first resolved promise/update
+    });
+}, [ state.var_1, state.var_2, state.var_3 ]);
+
+...
+```
+
+- To get the resolved promise after spicific time.
+
+```ts
+import { TimedPromise } from "prutill";
+
+new TimedPromise(500).then(r => r === 500);
+```
+
+# Possible improvements when requested
 
 :black_square_button: Add bundling to import from CDN (vanilla js, deno) -> umd, esm
 
