@@ -1,8 +1,10 @@
 {
   "name": "prutill",
-  "version": "1.0.2",
-  "description": "A set of utilities to solve Promise specific problems",
-  "main": "index.js",
+  "version": "1.0.3",
+  "description": "Promise utilities to improve multiple Promise processing.",
+  "keywords": ["Promise", "TimedPromise", "Stack", "Race", "React.js", "Deno", "Node", "vanilla js", "Typescript", "utilities"],
+  "main": "dist_commonjs/index.js",
+  "types": "./index.ts",
   "scripts": {
     "build": "rm -rf dist_* && tsc --project tsconfig-commonjs.json && tsc --project tsconfig-es6.json",
     "test": "jest && jest -c jest-node.config.json && deno test --config tsconfig-deno.json"
