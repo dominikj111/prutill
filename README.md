@@ -19,7 +19,7 @@ Ready to be used in Deno and Node.js. To see more details how to use it, please 
 
 `deno test https://raw.githubusercontent.com/dominikj111/prutill/main/tests/deno.test.js`
 
-## How to get it?
+## How to get it on Node.js?
 
 `npm i prutill`
 
