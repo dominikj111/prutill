@@ -1,4 +1,4 @@
-{{< /*<!-- markdownlint-disable MD041 -->*/ >}}
+<!-- markdownlint-disable MD041 -->
 
 [![GitHub version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=1.0.1&x2=0)](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=1.0.1&x2=0)
 [![Coverage Status](https://coveralls.io/repos/boennemann/badges/badge.svg)](https://coveralls.io/r/boennemann/badges)
@@ -11,7 +11,7 @@
 
 Ready to be used in Deno and Node.js as well as with any bundler. To see more details how to use it, please check related unit tests in `./src/*.spec.ts`, `./index-deno.(t|j)s`, `./index.ts` and tests in `./tests` folder.
 
-{{< /*<!-- markdownlint-disable MD033 -->*/ >}}
+<!-- markdownlint-disable MD033 -->
 <br /><br />
 
 The orignal inspiration went from the issue in React.js application I had, where the `useEffect` watched multiple variables triggered multiple promises which each of one ran `then` action. If latest promise has been quicker, the earlier less relevant has main effect upon the application state.
