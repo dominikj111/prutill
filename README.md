@@ -19,9 +19,11 @@ Ready to be used in Deno and Node.js. To see more details how to use it, please 
 
 `deno test https://raw.githubusercontent.com/dominikj111/prutill/main/tests/deno.test.js`
 
-## How to get it on Node.js?
+## How to get it on Node.js, Bun?
 
-`npm i prutill`
+`npm i prutill`, `bun add prutill`
+
+`bun test` doesn't work as expected with this library as there are Deno tests included and `timedPromise.spec.ts` also doesn't pass due to [bun/issues/3594](https://github.com/oven-sh/bun/issues/3594).
 
 # Problems to solve
 
