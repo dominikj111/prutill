@@ -7,6 +7,14 @@
     "https://deno.land/std@0.203.0/assert/assert_equals.ts": "d8ec8a22447fbaf2fc9d7c3ed2e66790fdb74beae3e482855d75782218d68227",
     "https://deno.land/std@0.203.0/assert/assertion_error.ts": "4d0bde9b374dfbcbe8ac23f54f567b77024fb67dbb1906a852d67fe050d42f56",
     "https://deno.land/std@0.203.0/assert/equal.ts": "9f1a46d5993966d2596c44e5858eec821859b45f783a5ee2f7a695dfc12d8ece",
-    "https://deno.land/std@0.203.0/fmt/colors.ts": "c51c4642678eb690dcf5ffee5918b675bf01a33fba82acf303701ae1a4f8c8d9"
+    "https://deno.land/std@0.203.0/fmt/colors.ts": "c51c4642678eb690dcf5ffee5918b675bf01a33fba82acf303701ae1a4f8c8d9",
+    "https://raw.githubusercontent.com/dominikj111/prutill/main/dist_es6/src/runManager.js": "bda5974997fee4f57a7e120157f14e4d61275313580699e87ea3d568845774c8",
+    "https://raw.githubusercontent.com/dominikj111/prutill/main/dist_es6/src/timedPromise.js": "1e2c34cc4d5fb9024c2d35898a7494f9fc48054bdea05f7f9c59c494546611e9",
+    "https://raw.githubusercontent.com/dominikj111/prutill/main/index-deno.js": "bf49dfeb77a21369b9fc4a1e68f53890690454aa1cb965d61f2090cdd94d57c9",
+    "https://raw.githubusercontent.com/dominikj111/prutill/main/index-deno.ts": "a504983234cbffc6c60b5de5488c1c9a140b39ef7ae5d6a76089cb23ac87fa3f",
+    "https://raw.githubusercontent.com/dominikj111/prutill/main/src/runManager.ts": "2ff26b770732f9cf7d4237b481b6af6742506de74ba4c278bbac597576072263",
+    "https://raw.githubusercontent.com/dominikj111/prutill/main/src/timedPromise.ts": "85709db7f928295f6a277e788d1b218750adc687c9ef62f4d8ef0b4b189e4855",
+    "https://raw.githubusercontent.com/dominikj111/prutill/main/tests/deno.test.js": "5702070a103e39da8f9bb505fccc274a7a0f9ee80dea767223460be94d412415",
+    "https://raw.githubusercontent.com/dominikj111/prutill/main/tests/deno.test.ts": "9f7fa098d383538876ec282ffdd435fe044a37f076e69285bdc9bcfdeacad56c"
   }
 }

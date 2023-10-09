@@ -9,9 +9,15 @@
 
 **Not React.js only** Promise utilities to improve multiple Promise processing.
 
-Ready to be used in Deno and Node.js as well as with any bundler. To see more details how to use it, please check related unit tests in `./src/*.spec.ts`, `./index-deno.(t|j)s`, `./index.ts` and tests in `./tests` folder.
+The orignal inspiration went from the issue in React.js application I had, where the `useEffect` watched multiple variables triggered multiple promises which each of one ran `then` action. If latest promise has been quicker, the earlier less relevant had main effect upon the application state.
 
-The orignal inspiration went from the issue in React.js application I had, where the `useEffect` watched multiple variables triggered multiple promises which each of one ran `then` action. If latest promise has been quicker, the earlier less relevant has main effect upon the application state.
+Ready to be used in Deno and Node.js. To see more details how to use it, please check related unit tests in `./src/*.spec.ts` and tests in `./tests` folder.
+
+## Deno example
+
+`deno test https://raw.githubusercontent.com/dominikj111/prutill/main/tests/deno.test.ts` or
+
+`deno test https://raw.githubusercontent.com/dominikj111/prutill/main/tests/deno.test.js`
 
 ## How to get it?
 
@@ -63,8 +69,10 @@ new TimedPromise(500).then(r => r === 500);
 
 # Possible improvements when requested
 
-:black_square_button: Add bundling to import from CDN (vanilla js, deno) -> umd, esm
+:black_square_button: Add bundling to import from CDN (vanilla js) -> umd, esm
 
 :black_square_button: Improve Continuous Integration
 
-:black_square_button: Add Changelog, Code of Conduct, Testing
+:black_square_button: Add Changelog, Code of Conduct
+
+:black_square_button: Automatic testing and linting
