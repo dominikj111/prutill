@@ -1,5 +1,4 @@
 {
     "extends": "./tsconfig.json",
-	"include": ["index-deno.ts", "tests"],
     "exclude": ["tests/node.test.js"]
 }
