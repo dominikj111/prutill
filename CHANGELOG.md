@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2025-02-13
+
+### Added
+- Added publint script for package validation
+- Improved test coverage for promise utilities
+- Added proper CHANGELOG and updated CONTRIBUTION guidelines
+
+### Changed
+- Updated package description to better reflect library capabilities
+- Enhanced keywords for better npm discoverability
+- Upgraded dev dependencies
+- Improved project structure
+- Removed redundant test:coverage from test script (already part of jest)
+
+### Fixed
+- Fixed minification process in build pipeline
+- Fixed CommonJS module generation for all files
+- Fixed package.json configuration
+- Improved Deno support
+
 ## [1.0.3] - 2025-02-13
 
 ### Added
