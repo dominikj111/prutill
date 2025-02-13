@@ -1,24 +1,24 @@
-[![GitHub version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=1.1.0&x2=0)](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=1.1.0&x2=0)
-[![codecov](https://codecov.io/gh/dominikj111/prutill/branch/main/graph/badge.svg)](https://codecov.io/gh/dominikj111/prutill)
+# 🚀 prutill
+
+[![npm](https://img.shields.io/npm/v/prutill)](https://www.npmjs.com/package/prutill)
+[![dependencies](https://img.shields.io/badge/production%20dependencies-0-brightgreen.svg)](https://github.com/dominikj111/prutill/blob/main/package.json)
 [![Coverage Status](https://coveralls.io/repos/boennemann/badges/badge.svg)](https://coveralls.io/r/boennemann/badges)
-[![dependency status](https://deps.rs/crate/autocfg/1.1.0/status.svg)](https://deps.rs/crate/autocfg/1.1.0)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
+[![License](https://img.shields.io/github/license/dominikj111/prutill)](https://github.com/dominikj111/prutill/blob/main/LICENSE)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dominikj111/prutill/issues)
 
-# prutill
+> A lightweight, environment-agnostic, production-ready Promise utility library for managing concurrent Promise
+> executions and their side effects.
 
-A lightweight, environment-agnostic, production-ready Promise utility library for managing concurrent Promise executions
-and their side effects.
+## ✨ Features
 
-## Features
+- 🌐 **Last Promise Resolution** - Ensures only the most recent Promise affects your application state
+- 🏃‍♂️ **Race Promise Resolution** - Acts on the first resolved Promise while managing others
+- 🕒 **Timed Promises** - Create Promises that resolve after a specified timeout
+- 🏗️ **Zero Dependencies** - Lightweight and focused functionality
+- 🔒 **Type-Safe** - Written in TypeScript with full type definitions
+- 🧪 **Well Tested** - Comprehensive test coverage
 
-- **Last Promise Resolution** - Ensures only the most recent Promise affects your application state
-- **Race Promise Resolution** - Acts on the first resolved Promise while managing others
-- **Timed Promises** - Create Promises that resolve after a specified timeout
-- **Environment Agnostic** - Works in Node.js, Deno, browsers, and bundlers
-- **Zero Dependencies** - Lightweight and focused functionality
-- **Type Safe** - Written in TypeScript with full type definitions
-
-## Installation
+## 🛠️ Installation
 
 ### Node.js / Bundlers
 
@@ -43,7 +43,14 @@ import {
 } from "https://raw.githubusercontent.com/dominikj111/prutill/main/index-deno.ts";
 ```
 
-## Usage
+## 📦 Supported Environments
+
+- ✅ Node.js (CommonJS)
+- ✅ ES Modules
+- ✅ Deno
+- ✅ Browsers
+
+## 💡 Usage
 
 ### Last Promise Resolution
 
@@ -94,7 +101,7 @@ new TimedPromise(1000, "Hello").then(value => {
 });
 ```
 
-## API Documentation
+## 📚 API Documentation
 
 ### getLastPromise<T>(key: string, promise: Promise<T>, resolveAllPrevious = true): Promise<T>
 
@@ -114,17 +121,23 @@ new TimedPromise(1000, "Hello").then(value => {
 - `timeout`: Time in milliseconds before the promise resolves
 - `passThrough`: Optional value to resolve with
 
-## Contributing
+## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTION.md) for details.
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
-## License
+## 📄 License
 
 Apache License 2.0 - see [LICENSE](LICENSE) for details.
 
-## Status
+## 📈 Status
 
 - Production Ready
 - Full Test Coverage
 - TypeScript Support
 - Cross-Platform Support
+
+---
+
+<div align="center">
+Made with ❤️ because I love coding
+</div>
