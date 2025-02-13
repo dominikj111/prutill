@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});class TimedPromise{constructor(e=0,s){this.promise=new Promise((t=>{setTimeout((()=>{t(s)}),e)}))}then(e){return this.promise.then((s=>e(s)))}}exports.default=TimedPromise;
+//# sourceMappingURL=timedPromise.cjs.map
