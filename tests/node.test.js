@@ -1,6 +1,7 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+// eslint-disable-next-line @typescript-eslint/no-require-imports, no-undef
 const { getLastPromise } = require("../dist_commonjs");
 
+// eslint-disable-next-line no-undef
 test("getLastPromise is available in Node.js runtime and works well", async () => {
 	const promiseStackResult = getLastPromise("a", new Promise(() => undefined));
 	getLastPromise("a", new Promise(() => undefined));

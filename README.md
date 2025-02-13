@@ -1,5 +1,3 @@
-<!-- markdownlint-disable MD041 -->
-
 [![GitHub version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=1.0.3&x2=0)](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=1.0.3&x2=0)
 [![Coverage Status](https://coveralls.io/repos/boennemann/badges/badge.svg)](https://coveralls.io/r/boennemann/badges)
 [![dependency status](https://deps.rs/crate/autocfg/1.1.0/status.svg)](https://deps.rs/crate/autocfg/1.1.0)
@@ -9,9 +7,12 @@
 
 **Not React.js only** Promise utilities to improve multiple Promise processing.
 
-The orignal inspiration went from the issue in React.js application I had, where the `useEffect` watched multiple variables triggered multiple promises which each of one ran `then` action. If latest promise has been quicker, the earlier less relevant had main effect upon the application state.
+The orignal inspiration went from the issue in React.js application I had, where the `useEffect` watched multiple
+variables triggered multiple promises which each of one ran `then` action. If latest promise has been quicker, the
+earlier less relevant had main effect upon the application state.
 
-Ready to be used in Deno and Node.js. To see more details how to use it, please check related unit tests in `./src/*.spec.ts` and tests in `./tests` folder.
+Ready to be used in Deno and Node.js. To see more details how to use it, please check related unit tests in
+`./src/*.spec.ts` and tests in `./tests` folder.
 
 ## Deno example
 
@@ -23,7 +24,8 @@ Ready to be used in Deno and Node.js. To see more details how to use it, please 
 
 `npm i prutill`, `bun add prutill`
 
-`bun test` doesn't work as expected with this library as there are Deno tests included and `timedPromise.spec.ts` also doesn't pass due to [bun/issues/3594](https://github.com/oven-sh/bun/issues/3594).
+`bun test` doesn't work as expected with this library as there are Deno tests included and `timedPromise.spec.ts` also
+doesn't pass due to [bun/issues/3594](https://github.com/oven-sh/bun/issues/3594).
 
 # Problems to solve
 

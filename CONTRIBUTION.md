@@ -1,6 +1,7 @@
 # Contributing to **prutill**
 
-Thank you for your interest in contributing to this repository! Before you do, please make an issue to discuss your proposal.
+Thank you for your interest in contributing to this repository! Before you do, please make an issue to discuss your
+proposal.
 
 ## How to Contribute
 
@@ -21,7 +22,8 @@ Thank you for your interest in contributing to this repository! Before you do, p
 
 ## Issue Tracker
 
-If you find any bugs or have feature requests, please open an issue in the issue tracker. Make sure to provide as much detail as possible.
+If you find any bugs or have feature requests, please open an issue in the issue tracker. Make sure to provide as much
+detail as possible.
 
 ## Code of Conduct
 
@@ -29,6 +31,7 @@ There is not any specific code of conduct as this repository is small.
 
 ## License
 
-By contributing to this repository, you agree that your contributions will be licensed under the Apache License 2.0 License.
+By contributing to this repository, you agree that your contributions will be licensed under the Apache License 2.0
+License.
 
 Thank you for reading and look forward to your involvement :)

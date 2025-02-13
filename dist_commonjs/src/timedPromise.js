@@ -1,16 +1,2 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class TimedPromise {
-    constructor(timeout = 0, passThrough) {
-        this.promise = new Promise(resolve => {
-            setTimeout(() => {
-                resolve(passThrough);
-            }, timeout);
-        });
-    }
-    then(onFulFilled) {
-        return this.promise.then(r => onFulFilled(r));
-    }
-}
-exports.default = TimedPromise;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});class TimedPromise{constructor(e=0,s){this.promise=new Promise((t=>{setTimeout((()=>{t(s)}),e)}))}then(e){return this.promise.then((s=>e(s)))}}exports.default=TimedPromise;
 //# sourceMappingURL=timedPromise.js.map
