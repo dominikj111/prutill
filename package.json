@@ -1,7 +1,7 @@
 {
 	"name": "prutill",
 	"version": "1.0.3",
-	"description": "Promise utilities to improve multiple Promise processing.",
+	"description": "Environment-agnostic production-ready promise utility library for managing promise stacks and race conditions. Supports Node.js, Deno, and browsers.",
 	"main": "dist_commonjs/index.cjs",
 	"module": "dist_es6/index.js",
 	"types": "./index.ts",
@@ -48,16 +48,17 @@
 		"url": "git+ssh://git@github.com:dominikj111/prutill.git"
 	},
 	"keywords": [
-		"Promise",
-		"TimedPromise",
-		"Stack",
-		"Race",
-		"React.js",
-		"Deno",
-		"Node",
-		"vanilla js",
-		"Typescript",
-		"utilities"
+		"promise",
+		"async",
+		"utility",
+		"typescript",
+		"nodejs",
+		"deno",
+		"browser",
+		"race-condition",
+		"promise-stack",
+		"cross-platform",
+		"production-ready"
 	],
 	"author": "dominikj111",
 	"license": "Apache-2.0",
