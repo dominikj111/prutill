@@ -6,5 +6,17 @@
 	"testMatch": ["**/src/**/?(*.)+(spec|test).[tj]s?(x)"],
 	"transform": {
 		"\\.(ts)$": "ts-jest"
+	},
+	"collectCoverage": true,
+	"coverageDirectory": "coverage",
+	"coverageReporters": ["text", "lcov", "html"],
+	"collectCoverageFrom": ["src/**/*.{js,ts}", "!**/node_modules/**", "!**/dist_**/**"],
+	"coverageThreshold": {
+		"global": {
+			"branches": 80,
+			"functions": 80,
+			"lines": 80,
+			"statements": 80
+		}
 	}
 }

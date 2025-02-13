@@ -32,4 +32,16 @@ describe("TimedPromise provides a Promise object what resolve after timeout", ()
 		expect(resolvedValue).toHaveBeenCalledTimes(1);
 		expect(resolvedValue).toHaveBeenCalledWith("Hello");
 	});
+
+	it("should resolve immediately with default timeout", async () => {
+		const resolvedValue = jest.fn();
+
+		const promise = new TimedPromise().then(r => resolvedValue(r));
+
+		jest.runAllTimers();
+		await promise;
+
+		expect(resolvedValue).toHaveBeenCalledTimes(1);
+		expect(resolvedValue).toHaveBeenCalledWith(undefined);
+	});
 });

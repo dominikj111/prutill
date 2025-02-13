@@ -6,7 +6,7 @@ import eslintConfigPrettier from "eslint-config-prettier";
 
 export default [
 	{
-		ignores: ["dist_commonjs/**", "dist_es6/**"],
+		ignores: ["dist_commonjs/**", "dist_es6/**", "coverage/**"],
 	},
 	eslint.configs.recommended,
 	{
