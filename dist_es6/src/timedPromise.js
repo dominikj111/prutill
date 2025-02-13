@@ -1,2 +1,14 @@
-class TimedPromise{constructor(e=0,s){this.promise=new Promise((t=>{setTimeout((()=>{t(s)}),e)}))}then(e){return this.promise.then((s=>e(s)))}}export default TimedPromise;
+class TimedPromise {
+    constructor(timeout = 0, passThrough) {
+        this.promise = new Promise(resolve => {
+            setTimeout(() => {
+                resolve(passThrough);
+            }, timeout);
+        });
+    }
+    then(onFulFilled) {
+        return this.promise.then(r => onFulFilled(r));
+    }
+}
+export default TimedPromise;
 //# sourceMappingURL=timedPromise.js.map

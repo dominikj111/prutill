@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-require-imports, no-undef
-const { getLastPromise } = require("../dist_commonjs");
+const { getLastPromise } = require("..");
 
 // eslint-disable-next-line no-undef
 test("getLastPromise is available in Node.js runtime and works well", async () => {

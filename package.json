@@ -2,27 +2,41 @@
 	"name": "prutill",
 	"version": "1.0.3",
 	"description": "Promise utilities to improve multiple Promise processing.",
-	"main": "dist_commonjs/index.js",
+	"main": "dist_commonjs/index.cjs",
 	"module": "dist_es6/index.js",
 	"types": "./index.ts",
 	"type": "module",
 	"exports": {
 		".": {
+			"types": "./index.ts",
 			"import": "./dist_es6/index.js",
-			"require": "./dist_commonjs/index.js",
-			"types": "./index.ts"
+			"require": "./dist_commonjs/index.cjs"
 		}
 	},
+	"files": [
+		"dist_commonjs",
+		"dist_es6",
+		"src",
+		"index-deno.js",
+		"index-deno.ts",
+		"index.ts",
+		"deno.json",
+		"CHANGELOG.md",
+		"LICENSE",
+		"README.md"
+	],
 	"scripts": {
-		"build": "rm -rf dist_commonjs/* dist_es6/* && tsc --project tsconfig-commonjs.json && tsc --project tsconfig-es6.json && npm run minify",
-		"minify": "for file in $(find dist_commonjs dist_es6 -name '*.js'); do terser \"$file\" -c -m --source-map \"content='${file}.map',url='$(basename ${file}).map'\" -o \"$file\"; done",
+		"build": "rm -rf dist_commonjs/* dist_es6/* && tsc --project tsconfig-commonjs.json && tsc --project tsconfig-es6.json && npm run rename-cjs && npm run minify",
+		"rename-cjs": "for f in dist_commonjs/*.js; do mv \"$f\" \"${f%.js}.cjs\"; done",
+		"minify": "for file in $(find dist_commonjs -name '*.cjs' dist_es6 -name '*.js'); do terser \"$file\" -c -m --source-map \"content='${file}.map',url='$(basename ${file}).map'\" -o \"$file\"; done",
 		"test": "npm run lint:all && jest && jest -c jest-node.config.json && command -v deno >/dev/null 2>&1 && deno test --config tsconfig-deno.json || echo '\nℹ️  \u001b[33mDeno is not installed. Skipping Deno tests.\u001b[0m'",
 		"lint": "eslint .",
 		"lint:md": "markdownlint \"**/*.md\" --fix",
 		"format": "prettier --check \"**/*.{ts,js,json,md}\"",
 		"lint:all": "npm run lint && npm run lint:md && npm run format",
 		"lint:fix": "eslint . --fix",
-		"format:fix": "prettier --write \"**/*.{ts,js,json,md}\""
+		"format:fix": "prettier --write \"**/*.{ts,js,json,md}\"",
+		"publint": "npx publint"
 	},
 	"repository": {
 		"type": "git",
