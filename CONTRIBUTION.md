@@ -1,37 +1,76 @@
-# Contributing to **prutill**
+# Contributing to prutill
 
-Thank you for your interest in contributing to this repository! Before you do, please make an issue to discuss your
-proposal.
+Thank you for your interest in contributing to prutill! We welcome contributions from everyone and are grateful for
+every pull request!
 
 ## How to Contribute
 
-1. Make an issue in the repository issue tracker
-2. Fork the repository
-3. Create a new branch for your contribution
-4. Make your changes and commit them
-5. Push your branch to your forked repository
-6. Open a pull request to merge your changes
+1. **Create an Issue**
+
+    - First, create an issue in the repository issue tracker
+    - Describe the bug you found or the feature you'd like to add
+    - Wait for discussion and approval before proceeding
+
+2. **Fork & Create a Branch**
+
+    - Fork the repository
+    - Create a branch with a descriptive name (e.g., `fix-async-bug` or `add-new-feature`)
+
+3. **Make Your Changes**
+
+    - Write your code following our code style guidelines
+    - Add tests for any new functionality
+    - Update documentation as needed
+
+4. **Test Your Changes**
+
+    - Run the test suite: `npm test`
+    - Ensure all tests pass
+    - Add new tests if you've added new functionality
+
+5. **Submit a Pull Request**
+    - Push your changes to your fork
+    - Create a pull request to our main branch
+    - Follow the pull request template
+    - Link the related issue in your pull request
+
+## Development Setup
+
+1. Clone the repository
+2. Install dependencies: `pnpm install`
+3. Run tests: `pnpm test`
 
 ## Code Style Guidelines
 
-- Format the code using Prettier
-- Don't differ too much in the conventions you can see in the existing code to be consistent
-- Write single line comments for clear explainations of your code (if needed)
-- Write documentation for any function or class you made
-- Write unit tests for your code
+- Format code using Prettier: `pnpm format:fix`
+- Follow existing code conventions for consistency
+- Use meaningful variable and function names
+- Add comments for complex logic
+- Write comprehensive documentation for public APIs
+- Include TypeScript types for all new code
 
-## Issue Tracker
+## Testing Guidelines
 
-If you find any bugs or have feature requests, please open an issue in the issue tracker. Make sure to provide as much
-detail as possible.
+- Write unit tests for all new functionality
+- Maintain test coverage
+- Test in both Node.js and Deno environments
+- Include edge cases in your tests
 
-## Code of Conduct
+## Documentation
 
-There is not any specific code of conduct as this repository is small.
+- Update README.md if you're adding new features
+- Add JSDoc comments for all public APIs
+- Update examples if necessary
+- Keep documentation clear and concise
+
+## Pull Request Process
+
+1. Update the README.md with details of changes if needed
+2. Update the CHANGELOG.md following semantic versioning
+3. The PR will be merged once you have the sign-off of a maintainer
 
 ## License
 
-By contributing to this repository, you agree that your contributions will be licensed under the Apache License 2.0
-License.
+By contributing to prutill, you agree that your contributions will be licensed under the Apache License 2.0 License.
 
-Thank you for reading and look forward to your involvement :)
+Thank you for contributing to prutill! 🎉
