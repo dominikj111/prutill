@@ -32,7 +32,7 @@
 		"minify:all": "npm run minify:commonjs && npm run minify:es6",
 		"minify:commonjs": "for file in $(find dist_commonjs -name '*.js'); do terser \"$file\" -c -m --source-map \"content='${file}.map',url='$(basename ${file%.*}).cjs.map'\" -o \"$file\"; done",
 		"minify:es6": "for file in $(find dist_es6 -name '*.js'); do terser \"$file\" -c -m --source-map \"content='${file}.map',url='$(basename ${file}).map'\" -o \"$file\"; done",
-		"test": "npm run lint:all && jest && jest -c jest-node.config.json && npm run test:deno && npm run test:coverage",
+		"test": "npm run lint:all && jest && jest -c jest-node.config.json && npm run test:deno",
 		"test:coverage": "jest --coverage",
 		"test:deno": "command -v deno >/dev/null 2>&1 && (deno test --config tsconfig-deno.json || exit 1) || (echo '\nℹ️  \u001b[33mDeno is not installed. Skipping Deno tests.\u001b[0m' && exit 0)",
 		"lint": "eslint .",
