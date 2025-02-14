@@ -41,7 +41,7 @@ import {
     getLastPromise,
     getRaceWonPromise,
     TimedPromise,
-} from "https://raw.githubusercontent.com/dominikj111/prutill/main/index-deno.ts";
+} from "https://raw.githubusercontent.com/dominikj111/prutill/main/mod.ts";
 ```
 
 ## 📦 Supported Environments

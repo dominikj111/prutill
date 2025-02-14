@@ -1,5 +1,5 @@
 import { assertEquals } from "https://deno.land/std@0.203.0/assert/assert_equals.ts";
-import { getLastPromise } from "../index-deno.js";
+import { getLastPromise } from "../mod.js";
 
 // eslint-disable-next-line no-undef
 Deno.test("getLastPromise is available in Deno runtime as JS and works well", async () => {

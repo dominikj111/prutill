@@ -17,13 +17,9 @@
 		"dist_commonjs",
 		"dist_es6",
 		"src",
-		"index-deno.js",
-		"index-deno.ts",
-		"index.ts",
-		"deno.json",
-		"CHANGELOG.md",
-		"LICENSE",
-		"README.md"
+		"mod.js",
+		"mod.ts",
+		"index.ts"
 	],
 	"scripts": {
 		"build": "rm -rf dist_commonjs/* dist_es6/* && tsc --project tsconfig-commonjs.json && tsc --project tsconfig-es6.json && npm run minify:all && npm run rename-cjs && npm run fix-maps",

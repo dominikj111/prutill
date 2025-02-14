@@ -3,7 +3,7 @@
 // @ts-nocheck
 
 import { assertEquals } from "https://deno.land/std@0.203.0/assert/assert_equals.ts";
-import { getLastPromise } from "../index-deno.ts";
+import { getLastPromise } from "../mod.ts";
 
 Deno.test("getLastPromise is available in Deno runtime as TS and works well", async () => {
 	const promiseStackResult = getLastPromise("a", new Promise(() => undefined));
