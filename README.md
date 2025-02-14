@@ -155,14 +155,10 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 
 ## 📄 License
 
-Apache License 2.0 - see [LICENSE](LICENSE) for details.
+Apache-2.0 © dominikj111
 
-## 📈 Status
-
-- Production Ready
-- Full Test Coverage
-- TypeScript Support
-- Cross-Platform Support
+This library is licensed under the Apache License, Version 2.0. You may obtain a copy of the License at
+<http://www.apache.org/licenses/LICENSE-2.0>
 
 ---
 
