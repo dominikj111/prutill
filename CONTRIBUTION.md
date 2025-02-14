@@ -24,7 +24,7 @@ every pull request!
 
 4. **Test Your Changes**
 
-    - Run the test suite: `npm test`
+    - Run the test suite: `pnpm test`
     - Ensure all tests pass
     - Add new tests if you've added new functionality
 
@@ -36,9 +36,24 @@ every pull request!
 
 ## Development Setup
 
+This library is environment-agnostic and has no production dependencies. While the library itself can run anywhere, the
+development environment uses Node.js and pnpm for building, testing, and maintaining the codebase.
+
+### Prerequisites
+
+1. **Node.js**: Any modern version will work as development dependencies handle Node.js-specific features
+2. **pnpm**: Our preferred package manager for consistent dependency management
+
+### Getting Started
+
 1. Clone the repository
 2. Install dependencies: `pnpm install`
 3. Run tests: `pnpm test`
+
+### Development Scripts
+
+- `pnpm build`: Build the library for all supported formats
+- `pnpm test`: Run the full test suite (including Node.js and Deno tests), linting and formatting
 
 ## Code Style Guidelines
 
