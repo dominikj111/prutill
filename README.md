@@ -14,6 +14,7 @@
 - 🌐 **Last Promise Resolution** - Ensures only the most recent Promise affects your application state
 - 🏃‍♂️ **Race Promise Resolution** - Acts on the first resolved Promise while managing others
 - 🕒 **Timed Promises** - Create Promises that resolve after a specified timeout
+- 🔄 **Promise Wrapper** - Wraps synchronous or asynchronous functions into Promises
 - 🏗️ **Zero Dependencies** - Lightweight and focused functionality
 - 🔒 **Type-Safe** - Written in TypeScript with full type definitions
 - 🧪 **Well Tested** - Comprehensive test coverage
@@ -99,6 +100,33 @@ new TimedPromise(500).then(() => {
 new TimedPromise(1000, "Hello").then(value => {
     console.log(value); // Outputs: "Hello"
 });
+```
+
+### Promise Wrapper
+
+Wrap any synchronous or asynchronous function into a Promise:
+
+```typescript
+import { promiseWrapper } from "prutill";
+
+// Wrap a synchronous function
+const result1 = await promiseWrapper(() => 42);
+console.log(result1); // 42
+
+// Wrap an asynchronous function
+const result2 = await promiseWrapper(async () => {
+    const response = await fetch("https://api.example.com/data");
+    return response.json();
+});
+
+// Error handling
+try {
+    await promiseWrapper(() => {
+        throw new Error("Something went wrong");
+    });
+} catch (error) {
+    console.error(error); // Error: Something went wrong
+}
 ```
 
 ## 📚 API Documentation
