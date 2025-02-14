@@ -1,0 +1,2 @@
+"use strict";function promiseWrapper(e){return new Promise(((r,t)=>{try{const o=e();o instanceof Promise?o.then(r).catch(t):r(o)}catch(e){t(e)}}))}Object.defineProperty(exports,"__esModule",{value:!0}),exports.promiseWrapper=promiseWrapper;
+//# sourceMappingURL=promiseWrapper.cjs.map

@@ -5,3 +5,5 @@ export { stackBuilder, getLastPromise, raceBuilder, getRaceWonPromise } from "./
 
 import TimedPromise from "./src/timedPromise.ts";
 export { TimedPromise };
+
+export { promiseWrapper } from "./src/promiseWrapper.ts";

@@ -2,3 +2,5 @@ export { stackBuilder, getLastPromise, raceBuilder, getRaceWonPromise } from "./
 
 import TimedPromise from "./dist_es6/src/timedPromise.js";
 export { TimedPromise };
+
+export { promiseWrapper } from "./dist_es6/src/promiseWrapper.js";

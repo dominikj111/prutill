@@ -1,0 +1,1 @@
+{"version":3,"names":["promiseWrapper","callback","Promise","resolve","reject","result","then","catch","error"],"sources":["../../src/promiseWrapper.ts"],"mappings":"OAOM,SAAUA,eAAkBC,GACjC,OAAO,IAAIC,SAAW,CAACC,EAASC,KAC/B,IACC,MAAMC,EAASJ,IAEXI,aAAkBH,QACrBG,EAAOC,KAAKH,GAASI,MAAMH,GAE3BD,EAAQE,EAEV,CAAE,MAAOG,GACRJ,EAAOI,EACR,IAEF","ignoreList":[]}
