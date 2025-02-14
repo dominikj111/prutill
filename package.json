@@ -17,9 +17,9 @@
 		"dist_commonjs",
 		"dist_es6",
 		"src",
+		"index.ts",
 		"mod.js",
-		"mod.ts",
-		"index.ts"
+		"mod.ts"
 	],
 	"scripts": {
 		"build": "rm -rf dist_commonjs/* dist_es6/* && tsc --project tsconfig-commonjs.json && tsc --project tsconfig-es6.json && npm run minify:all && npm run rename-cjs && npm run fix-maps",
