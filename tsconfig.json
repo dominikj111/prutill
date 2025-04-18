@@ -1,15 +1,23 @@
 {
 	"compilerOptions": {
-		"target": "ES2022",
+		"target": "ESNext",
+		"module": "ESNext",
+		"allowJs": false,
+		"checkJs": false,
+		"skipLibCheck": true,
+		"noEmit": false,
+		"sourceMap": true,
+
+		"lib": ["ESNext", "DOM"],
+		"baseUrl": ".",
+
 		"allowSyntheticDefaultImports": true,
 		"alwaysStrict": true,
-		"noImplicitAny": false,
-		"noImplicitThis": false,
+		"noImplicitAny": true,
+		"noImplicitThis": true,
 		"strictNullChecks": true,
 		"strictFunctionTypes": true,
-		"allowJs": false,
-		"sourceMap": true,
-		"lib": ["ES2022", "DOM"],
-		"baseUrl": "."
-	}
+		"noUncheckedIndexedAccess": true
+	},
+	"exclude": ["node_modules"]
 }
