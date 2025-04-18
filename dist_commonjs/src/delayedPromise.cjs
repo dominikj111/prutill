@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});class DelayedPromise{constructor(e=0,s){this.promise=new Promise((t=>{setTimeout((()=>{t(s)}),e)}))}then(e){return this.promise.then((s=>e(s)))}}exports.default=DelayedPromise;
+//# sourceMappingURL=delayedPromise.cjs.map

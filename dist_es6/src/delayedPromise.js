@@ -1,0 +1,2 @@
+class DelayedPromise{constructor(e=0,s){this.promise=new Promise((t=>{setTimeout((()=>{t(s)}),e)}))}then(e){return this.promise.then((s=>e(s)))}}export default DelayedPromise;
+//# sourceMappingURL=delayedPromise.js.map

@@ -1,2 +1,2 @@
-export{stackBuilder,getLastPromise,raceBuilder,getRaceWonPromise}from"./src/runManager";import TimedPromise from"./src/timedPromise";export{TimedPromise};export{promiseWrapper}from"./src/promiseWrapper";
+export{stackBuilder,getLastPromise,raceBuilder,getRaceWonPromise}from"./src/runManager";import DelayedPromise from"./src/delayedPromise";export{DelayedPromise};export{promiseWrapper}from"./src/promiseWrapper";
 //# sourceMappingURL=index.js.map

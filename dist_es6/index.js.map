@@ -1,1 +1,1 @@
-{"version":3,"names":["stackBuilder","getLastPromise","raceBuilder","getRaceWonPromise","TimedPromise","promiseWrapper"],"sources":["../index.ts"],"mappings":"OAASA,aAAcC,eAAgBC,YAAaC,sBAAyB,0BAEtEC,iBAAkB,4BAChBA,qBAEAC,mBAAsB","ignoreList":[]}
+{"version":3,"names":["stackBuilder","getLastPromise","raceBuilder","getRaceWonPromise","DelayedPromise","promiseWrapper"],"sources":["../index.ts"],"mappings":"OAASA,aAAcC,eAAgBC,YAAaC,sBAAyB,0BAEtEC,mBAAoB,8BAClBA,uBAEAC,mBAAsB","ignoreList":[]}
