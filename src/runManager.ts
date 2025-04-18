@@ -46,7 +46,7 @@ export function stackBuilder<T>(resolveAllPrevious = true): (_: Promise<T>) => P
 				if (promiseWithId.id === storedPromises.length) {
 					if (resolveAllPrevious) {
 						for (let i = 0; i < storedResolveCallbacks.length; i++) {
-							storedResolveCallbacks[i](result);
+							storedResolveCallbacks[i]!(result);
 						}
 					} else {
 						resolve(result);
@@ -116,7 +116,7 @@ export function raceBuilder<T>(resolveAllOthers = true): (_: Promise<T>) => Prom
 
 				if (resolveAllOthers) {
 					for (let i = 0; i < storedResolveCallbacks.length; i++) {
-						storedResolveCallbacks[i](result);
+						storedResolveCallbacks[i]!(result);
 					}
 				} else {
 					resolve(result);

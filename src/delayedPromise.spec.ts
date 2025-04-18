@@ -1,6 +1,6 @@
-import TimedPromise from "./timedPromise";
+import DelayedPromise from "./delayedPromise";
 
-describe("TimedPromise provides a Promise object what resolve after timeout", () => {
+describe("DelayedPromise provides a Promise object what resolve after timeout", () => {
 	beforeAll(() => {
 		jest.useFakeTimers();
 	});
@@ -12,7 +12,7 @@ describe("TimedPromise provides a Promise object what resolve after timeout", ()
 	it("should to by resolved after expired time", async () => {
 		const resolvedValue = jest.fn();
 
-		const promise = new TimedPromise(500).then(r => resolvedValue(r));
+		const promise = new DelayedPromise(500).then(r => resolvedValue(r));
 
 		jest.runAllTimers();
 		await promise;
@@ -24,7 +24,7 @@ describe("TimedPromise provides a Promise object what resolve after timeout", ()
 	it("allows to pass through value", async () => {
 		const resolvedValue = jest.fn();
 
-		const promise = new TimedPromise(500, "Hello").then(r => resolvedValue(r));
+		const promise = new DelayedPromise(500, "Hello").then(r => resolvedValue(r));
 
 		jest.runAllTimers();
 		await promise;
@@ -36,7 +36,7 @@ describe("TimedPromise provides a Promise object what resolve after timeout", ()
 	it("should resolve immediately with default timeout", async () => {
 		const resolvedValue = jest.fn();
 
-		const promise = new TimedPromise().then(r => resolvedValue(r));
+		const promise = new DelayedPromise().then(r => resolvedValue(r));
 
 		jest.runAllTimers();
 		await promise;

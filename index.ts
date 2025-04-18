@@ -1,6 +1,6 @@
 export { stackBuilder, getLastPromise, raceBuilder, getRaceWonPromise } from "./src/runManager";
 
-import TimedPromise from "./src/timedPromise";
-export { TimedPromise };
+import DelayedPromise from "./src/delayedPromise";
+export { DelayedPromise };
 
 export { promiseWrapper } from "./src/promiseWrapper";

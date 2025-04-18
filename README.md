@@ -40,7 +40,7 @@ pnpm add prutill
 import {
     getLastPromise,
     getRaceWonPromise,
-    TimedPromise,
+    DelayedPromise,
 } from "https://raw.githubusercontent.com/dominikj111/prutill/main/mod.ts";
 ```
 
@@ -89,15 +89,15 @@ getRaceWonPromise("fastest-api", fetch("api2"));
 Create Promises that resolve after a specific duration:
 
 ```typescript
-import { TimedPromise } from "prutill";
+import { DelayedPromise } from "prutill";
 
 // Resolve after 500ms
-new TimedPromise(500).then(() => {
+new DelayedPromise(500).then(() => {
     console.log("500ms passed");
 });
 
 // Resolve with value after 1000ms
-new TimedPromise(1000, "Hello").then(value => {
+new DelayedPromise(1000, "Hello").then(value => {
     console.log(value); // Outputs: "Hello"
 });
 ```
@@ -143,7 +143,7 @@ try {
 - `promise`: Promise to add to the race
 - `resolveAllOthers`: If true, resolves all other promises with the winning value
 
-### TimedPromise<T>
+### DelayedPromise<T>
 
 - `constructor(timeout: number, passThrough?: T)`
 - `timeout`: Time in milliseconds before the promise resolves

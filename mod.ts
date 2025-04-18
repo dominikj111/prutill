@@ -3,7 +3,7 @@
 
 export { stackBuilder, getLastPromise, raceBuilder, getRaceWonPromise } from "./src/runManager.ts";
 
-import TimedPromise from "./src/timedPromise.ts";
-export { TimedPromise };
+import DelayedPromise from "./src/delayedPromise.ts";
+export { DelayedPromise };
 
 export { promiseWrapper } from "./src/promiseWrapper.ts";
