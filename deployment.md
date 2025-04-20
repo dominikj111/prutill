@@ -74,10 +74,6 @@ If dist folders changed, commit dist build separatelly.
 6. **Publish to npm**:
 
     ```bash
-    # Login to npm if not already logged in
-    npm login
-
-    # Publish the package
     npm publish
     ```
 
