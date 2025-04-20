@@ -1,6 +1,6 @@
 {
 	"name": "prutill",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"description": "Environment-agnostic production-ready promise utility library for managing promise stacks and race conditions. Supports Node.js, Deno, and browsers.",
 	"main": "dist_commonjs/index.cjs",
 	"module": "dist_es6/index.js",

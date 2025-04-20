@@ -41,7 +41,7 @@ import {
     getLastPromise,
     getRaceWonPromise,
     DelayedPromise,
-} from "https://raw.githubusercontent.com/dominikj111/prutill/main/mod.ts";
+} from "https://raw.githubusercontent.com/dominikj111/prutill/refs/tags/v1.2.0/mod.js";
 ```
 
 ## 📦 Supported Environments

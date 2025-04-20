@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2025-04-20
+
+### Added
+
+- Added `promiseWrapper` utility for synchronous and asynchronous function Promise conversion
+- Added additional handy utilities for Promise management
+- Improved Deno support with better cross-platform compatibility
+
+### Changed
+
+- Renamed `TimedPromise` to `DelayedPromise` for better semantic clarity
+- Switched to pnpm package manager for improved dependency management
+- Enhanced package configuration for better compatibility across environments
+
+### Fixed
+
+- Fixed ESLint configuration for improved code quality enforcement
+- Fixed unit tests for better reliability
+- Fixed VSCode Jest plugin integration for better developer experience
+- Improved deployment documentation
+
 ## [1.2.0-rc.1] - 2025-02-14
 
 ### Added
