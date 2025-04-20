@@ -7,6 +7,8 @@ This document outlines the steps to deploy the prutill package to npm.
 - Build the package first: `pnpm build`
 - Ensure all tests pass: `pnpm test` (includes lint checks - eslint, tsc, publint, unit tests, and environmental tests)
 
+Ensure correct `git config user.email` and `git config user.name` are set.
+
 If dist folders changed, commit dist build separatelly.
 
 ## Deployment Steps
@@ -50,8 +52,7 @@ If dist folders changed, commit dist build separatelly.
 
     Where the 'vX.Y.Z' is the version number from package.json.
 
-    Gitlogs:
-    "
+    Gitlogs: "
 
 3. **Commit version changes**:
 
