@@ -8,6 +8,12 @@ import {
 	withExtendableTimeout,
 } from "./utilities";
 
+import { promiseWrapper } from "./promiseWrapper";
+
+jest.mock("./promiseWrapper", () => ({
+	promiseWrapper: jest.fn().mockImplementation(fn => fn()),
+}));
+
 describe("utilities", () => {
 	describe("sleep", () => {
 		it("should resolve after specified time", async () => {
@@ -67,6 +73,24 @@ describe("utilities", () => {
 			const fn = () => "immediate";
 			const result = await retry(fn, 3, 100);
 			expect(result).toBe("immediate");
+		});
+
+		it("should handle direct promise resolution", async () => {
+			const fn = jest.fn().mockResolvedValue("direct success");
+			const result = await retry(fn, 3, 100);
+			expect(result).toBe("direct success");
+			expect(fn).toHaveBeenCalledTimes(1);
+		});
+
+		it("should directly use promiseWrapper for successful promises", async () => {
+			const testFn = () => Promise.resolve("success from wrapper");
+
+			const result = await retry(testFn);
+
+			expect(promiseWrapper).toHaveBeenCalledWith(testFn);
+			expect(result).toBe("success from wrapper");
+
+			jest.unmock("./promiseWrapper");
 		});
 	});
 
@@ -199,6 +223,36 @@ describe("utilities", () => {
 			cancel();
 			await expect(cancellable).rejects.toThrow("Promise was cancelled");
 		});
+
+		it("should handle cancellation after promise resolves", async () => {
+			const promise = Promise.resolve("success");
+			const { promise: cancellable, cancel } = makeCancellable(promise);
+
+			const result = await cancellable;
+			expect(result).toBe("success");
+
+			cancel();
+		});
+
+		it("should handle promise rejection and cancellation correctly", async () => {
+			const errorPromise = Promise.reject(new Error("Test error"));
+
+			const { promise: cancellablePromise, cancel } = makeCancellable(errorPromise);
+
+			cancel();
+
+			await expect(cancellablePromise).rejects.toThrow("Promise was cancelled");
+
+			const delayedErrorPromise = new Promise((_, reject) => {
+				setTimeout(() => reject(new Error("Delayed error")), 50);
+			});
+
+			const { promise: delayedCancellable, cancel: delayedCancel } = makeCancellable(delayedErrorPromise);
+
+			delayedCancel();
+
+			await expect(delayedCancellable).rejects.toThrow("Promise was cancelled");
+		});
 	});
 
 	describe("withExtendableTimeout", () => {
@@ -219,7 +273,6 @@ describe("utilities", () => {
 			const promise = sleep(300).then(() => "done");
 			const { promise: withTimeout, resetTimeout } = withExtendableTimeout(promise, 200);
 
-			// Extend timeout after 150ms
 			setTimeout(resetTimeout, 150);
 
 			const result = await withTimeout;
@@ -236,7 +289,6 @@ describe("utilities", () => {
 			const promise = sleep(400).then(() => "done");
 			const { promise: withTimeout, resetTimeout } = withExtendableTimeout(promise, 200);
 
-			// Reset timeout multiple times
 			setTimeout(resetTimeout, 150);
 			setTimeout(resetTimeout, 250);
 			setTimeout(resetTimeout, 350);

@@ -47,9 +47,9 @@ export const sequential = async <T>(promises: (() => Promise<T>)[]): Promise<T[]
  * Creates a deferred promise that can be resolved/rejected outside the promise constructor
  */
 export const createDeferred = <T>() => {
-	let resolve!: (value: T | PromiseLike<T>) => void;
+	let resolve!: (_: T | PromiseLike<T>) => void;
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	let reject!: (reason?: any) => void;
+	let reject!: (_reason?: any) => void;
 
 	const promise = new Promise<T>((res, rej) => {
 		resolve = res;
@@ -86,7 +86,7 @@ export const makeCancellable = <T>(promise: Promise<T>) => {
 export const withExtendableTimeout = <T>(promise: Promise<T>, timeoutMs: number, errorMessage?: string) => {
 	let timeoutId: number | ReturnType<typeof setTimeout>;
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	let reject: (reason?: any) => void;
+	let reject!: (_reason?: any) => void;
 
 	const resetTimeout = () => {
 		clearTimeout(timeoutId as number);
